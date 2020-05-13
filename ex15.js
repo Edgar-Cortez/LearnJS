@@ -3,6 +3,9 @@
 // We test the node's debug feature and step through the code
 // https://nodejs.org/api/debugger.html
 
+// More info on debugger
+// https://forum.learncodethehardway.com/t/debugging-ex-15-video-introduces-debug-from-within-node/4144
+
 // node inspect filename.js - To start debugging
 // ctrl + d - To exit debugger
 
