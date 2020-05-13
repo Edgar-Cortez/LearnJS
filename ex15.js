@@ -4,6 +4,7 @@
 // https://nodejs.org/api/debugger.html
 
 // node inspect filename.js - To start debugging
+// ctrl + d - To exit debugger
 
 // exec (variable) - to check value of specific variable
 
