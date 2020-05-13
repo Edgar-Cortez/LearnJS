@@ -1,5 +1,12 @@
 // Exercise 15: If and Else
 
+// We test the node's debug feature and step through the code
+// https://nodejs.org/api/debugger.html
+
+// node inspect filename.js - To start debugging
+
+// exec (variable) - to check value of specific variable
+
 let x = 10;
 
 if (x === 10){
