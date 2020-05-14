@@ -24,10 +24,10 @@
 let count = 5;
 label1:
 while (count > 0) {
-    console.log("in while", count);
+    console.log("**** in while ****", count);
     if (count > 2) {
         for (let i = 0; i < 4; i++) {
-            console.log("in for", i);
+            console.log("**** in for ****", i);
             if (i == 2) {
                 count--;
                 continue label1;
@@ -35,7 +35,7 @@ while (count > 0) {
         }
     } else if (count == 2) {
         count -= 2;
-        console.log("Continue in while");
+        console.log("**** Continue in while ****");
         continue label1;
     } else {
         break;
@@ -45,4 +45,4 @@ while (count > 0) {
 }
 
 label2:
-console.log("Done.");
+console.log("**** Done. ****");
