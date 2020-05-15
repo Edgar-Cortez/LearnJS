@@ -55,12 +55,12 @@ exports.languages = [
 /** Final Challenge
  * Little Red Corvette Baby UR mush 2 fast
  * 
- * data.cars[1].size
- * data.cars[1].color
- * data.cars[1].type
- * data.cars[3].size
- * data.fruits[3].rating
- * data.languages[0].opinion[1]
- * data.fruits[2].count
- * data.languages[4].speed
+ * data.cars[1].size                    O
+ * data.cars[1].color                   O
+ * data.cars[1].type                    O
+ * data.cars[3].size                    O
+ * data.fruits[3].rating                O
+ * data.languages[0].opinion[1]         O
+ * data.fruits[2].count                 O
+ * data.languages[4].speed              O
  */
