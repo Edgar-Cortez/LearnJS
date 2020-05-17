@@ -30,14 +30,29 @@ const ask = (hp, prompt) => {
     }
 }
 
-const door = (hp) => {
+const door = (hp, message) => {
+    say(message);
     // They have to open the door to get the gold
     // What kind of puzzle will they solve?
 }
 
 const hallway = (hp, message) => {
     say(message);
-    say("***** You're in the hallway *****");
+    say("You walk for a short while and the path diverges into 3.");
+    let next = ask(hp, "Left, Middle, Right - which path do you take? ");
+    if (next === "left") {
+        say("You choose the left path");
+        // circle around
+        hallway(hp, "The path spirals down and twists... You see a light.");
+    } else if (next === "right") {
+        say("You choose the right path");
+        // leads to the gold room
+        gold(hp, "The path spirals up and bends to the right. There you find a doorway.");
+    } else {
+        say("You chose the middle path");
+        // leads to the door
+        door(hp, "You open the door cautiously.");
+    }
 }
 
 const spider = (hp) => {
@@ -52,7 +67,7 @@ const spider = (hp) => {
 const gold = (hp, message) => {
     // End of the game they win if they get the gold
     say(message);
-    //say("The sacks of gold and jewels lay in a huge pile. You're filthy stinkin' rich!!!");
+    say("The sacks of gold and jewels lay in a huge pile. You're filthy stinkin' rich!!!");
     process.exit(1);
 }
 
