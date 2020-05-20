@@ -33,7 +33,16 @@ const ask = (hp, prompt) => {
 const door = (hp, message) => {
     say(message);
     // They have to open the door to get the gold
+    say("Inside, you see what looks like stone table with glyphs all over it.");
     // What kind of puzzle will they solve?
+    let next = ask(hp, "Do you walk closer?");
+
+    if(next ==="yes"){
+        say("Getting a closer look - There is circular sunken relief about the size a coin could fit in.");
+        // ****** Need a boolean variable to check if the pick up the coin from the well. ******   
+    } else {
+        hallway(hp, "You turn around and close the door.");
+    }
 }
 
 const hallway = (hp, message) => {
@@ -111,7 +120,9 @@ const baseOfWell = (hp) => {
         let pickup = ask(hp, "You grab the coin, but it's stuck. Do you use more force to get it out?");
         // pull harder and pocket the coin
         if (pickup === "yes") {
-            say("You readjust your position and bend at the knees and ... PULL\nYou feel whatever the coin was attached to snap and the coin is in your hands!\nYou slip the shiny gold coin in your pocket");
+            say("You readjust your position and bend at the knees and ... PULL\nYou feel whatever the coin was attached to snap and the coin is in your hands!\nYou drop the shiny gold coin in your pocket");
+            //* ****** Need a boolean variable to check if the coin is in your possesion. ******
+            
             // Or go take a wrong turn to the spider
             spider(hp);
         // coin is stuck, hard to pull - leave it
